@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Deepworld Wiki</title>
+<script>
+  // Redirect to index with hash for GitHub Pages SPA support
+  var path = window.location.pathname;
+  var hash = path.split('/').pop();
+  if (hash && hash !== 'index.html') {
+    window.location.replace(window.location.origin + window.location.pathname.replace(hash, '') + '#' + hash);
+  } else {
+    window.location.replace(window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '/'));
+  }
+</script>
+</head>
+<body></body>
+</html>
