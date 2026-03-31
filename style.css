@@ -1,7 +1,8 @@
 /* ===== DEEPWORLD WIKI — Game-Accurate Steampunk Theme ===== */
-/* Fonts: Press Start 2P for pixel headings (matches in-game bitmap font), */
-/* Silkscreen for UI elements, Inter for readable body text */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=Inter:wght@400;500;600;700&display=swap');
+/* Fonts: Telegrama Render (actual Deepworld in-game font), */
+/* Press Start 2P as fallback, Inter for readable body text */
+@import url('https://fonts.cdnfonts.com/css/telegrama');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
   /* Deepworld underground palette — warm earthy darks */
@@ -145,9 +146,9 @@ body {
 }
 
 .topbar-title {
-  font-family: 'Press Start 2P', monospace;
+  font-family: 'Telegrama', 'Press Start 2P', monospace;
   color: var(--heading);
-  font-size: 12px;
+  font-size: 18px;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
@@ -177,7 +178,7 @@ body {
   border: 1px solid var(--border);
   color: var(--text);
   padding: 5px 12px;
-  font-size: 13px;
+  font-size: 20px;
   width: 220px;
   outline: none;
   font-family: 'Inter', sans-serif;
@@ -207,7 +208,7 @@ body {
   padding: 8px 12px;
   cursor: pointer;
   border-bottom: 1px solid var(--border);
-  font-size: 13px;
+  font-size: 20px;
 }
 
 .search-result-item:hover { background: var(--bg-sidebar); }
@@ -244,18 +245,18 @@ body {
 
 .sidebar-logo span {
   display: block;
-  font-family: 'Silkscreen', monospace;
+  font-family: 'Telegrama', 'Press Start 2P', monospace;
   color: var(--heading);
-  font-size: 22px;
+  font-size: 24px;
   letter-spacing: 3px;
 }
 
 .nav-group { padding: 4px 0; }
 
 .nav-group-title {
-  font-family: 'Silkscreen', monospace;
+  font-family: 'Telegrama', 'Press Start 2P', monospace;
   color: var(--heading);
-  font-size: 13px;
+  font-size: 20px;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 6px 14px 2px;
@@ -267,7 +268,7 @@ body {
   padding: 4px 14px 4px 20px;
   color: var(--link);
   text-decoration: none;
-  font-size: 13px;
+  font-size: 20px;
   transition: background 0.15s, color 0.15s;
   border-left: 2px solid transparent;
 }
@@ -317,7 +318,7 @@ body {
 /* ===== HEADINGS ===== */
 /* Headings use the game's pixel bitmap font */
 h1, h2, h3, h4 {
-  font-family: 'Press Start 2P', 'Silkscreen', monospace;
+  font-family: 'Telegrama', 'Press Start 2P', monospace;
   color: var(--heading);
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -325,7 +326,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 16px; /* Press Start 2P is very wide, so smaller size */
+  font-size: 26px; /* Telegrama Render 2014 the actual Deepworld font, so smaller size */
   letter-spacing: 2px;
   margin-bottom: 16px;
   padding-bottom: 10px;
@@ -334,7 +335,7 @@ h1 {
 }
 
 h2 {
-  font-size: 13px;
+  font-size: 20px;
   margin: 28px 0 12px;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--border);
@@ -342,8 +343,8 @@ h2 {
   text-shadow: 0 0 6px rgba(200, 160, 48, 0.2);
 }
 
-h3 { font-size: 12px; margin: 20px 0 8px; color: var(--wood); }
-h4 { font-size: 11px; margin: 14px 0 6px; color: var(--wood); }
+h3 { font-size: 18px; margin: 20px 0 8px; color: var(--wood); }
+h4 { font-size: 16px; margin: 14px 0 6px; color: var(--wood); }
 
 p { margin-bottom: 10px; }
 a { color: var(--link); text-decoration: none; transition: color 0.15s, text-shadow 0.15s; }
@@ -360,9 +361,9 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
   background: linear-gradient(135deg, rgba(125,200,32,0.15), rgba(200,160,48,0.05));
   border-bottom: 1px solid var(--border);
   padding: 8px 14px;
-  font-family: 'Silkscreen', monospace;
+  font-family: 'Telegrama', 'Press Start 2P', monospace;
   color: var(--heading);
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 2px;
   text-transform: uppercase;
   display: flex;
@@ -390,7 +391,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
 }
 
 .welcome-banner .banner-header h1 {
-  margin: 0; padding: 0; border: none; font-size: 14px;
+  margin: 0; padding: 0; border: none; font-size: 24px;
   text-shadow: 0 0 16px rgba(125, 200, 32, 0.4), 2px 2px 0 rgba(0,0,0,0.5);
 }
 
@@ -439,8 +440,8 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
 }
 
 .cat-card .cat-label {
-  font-family: 'Silkscreen', monospace;
-  font-size: 15px;
+  font-family: 'Telegrama', 'Press Start 2P', monospace;
+  font-size: 16px;
   letter-spacing: 1px;
   color: var(--heading);
 }
@@ -450,13 +451,13 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
   width: 100%;
   border-collapse: collapse;
   margin: 12px 0 20px;
-  font-size: 13px;
+  font-size: 20px;
 }
 
 .wiki-table th {
   background: rgba(212,152,44,0.12);
   color: var(--heading);
-  font-family: 'Silkscreen', monospace;
+  font-family: 'Telegrama', 'Press Start 2P', monospace;
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 8px 10px;
@@ -487,7 +488,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
   background: linear-gradient(135deg, rgba(125,200,32,0.2), rgba(200,160,48,0.08));
   border-bottom: 1px solid var(--border);
   padding: 8px 12px;
-  font-family: 'Silkscreen', monospace;
+  font-family: 'Telegrama', 'Press Start 2P', monospace;
   color: var(--heading);
   font-size: 18px;
   letter-spacing: 2px;
@@ -504,7 +505,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
 .infobox-row {
   display: flex;
   border-bottom: 1px solid var(--border);
-  font-size: 13px;
+  font-size: 20px;
 }
 
 .infobox-row:last-child { border-bottom: none; }
@@ -563,14 +564,14 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
   background: var(--bg-card);
   border: 1px solid var(--border);
   padding: 10px;
-  font-size: 13px;
+  font-size: 20px;
   display: flex;
   align-items: flex-start;
   gap: 10px;
 }
 
 .acc-item .acc-name {
-  font-family: 'Silkscreen', monospace;
+  font-family: 'Telegrama', 'Press Start 2P', monospace;
   color: var(--heading);
   font-size: 16px;
   letter-spacing: 1px;
@@ -595,7 +596,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
 }
 
 .bomb-card .bomb-info .bomb-name {
-  font-family: 'Silkscreen', monospace;
+  font-family: 'Telegrama', 'Press Start 2P', monospace;
   color: var(--heading);
   font-size: 15px;
 }
@@ -623,7 +624,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
 }
 
 .key-item .key-info .key-name {
-  font-family: 'Silkscreen', monospace;
+  font-family: 'Telegrama', 'Press Start 2P', monospace;
   color: var(--legendary);
   font-size: 16px;
   letter-spacing: 1px;
@@ -680,7 +681,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
   color: var(--heading);
   padding: 6px 14px;
   cursor: pointer;
-  font-family: 'Silkscreen', monospace;
+  font-family: 'Telegrama', 'Press Start 2P', monospace;
   font-size: 16px;
   letter-spacing: 1px;
   border-radius: 2px;
@@ -836,7 +837,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
 }
 
 .fossil-card .fossil-name {
-  font-family: 'Silkscreen', monospace;
+  font-family: 'Telegrama', 'Press Start 2P', monospace;
   color: var(--heading);
   font-size: 14px;
   margin-top: 4px;
@@ -888,4 +889,30 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
   }
 
   .biome-header-img { max-height: 160px; }
+}
+
+/* ===== PLAY DEEPWORLD BUTTON ===== */
+.play-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #5A8A3C, #7DC820);
+  color: #fff !important;
+  text-decoration: none;
+  font-family: 'Telegrama', 'Press Start 2P', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: 2px solid #7DC820;
+  transition: all 0.2s;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  box-shadow: 0 0 12px rgba(125, 200, 32, 0.2);
+}
+.play-btn:hover {
+  background: linear-gradient(135deg, #7DC820, #a8f040);
+  border-color: #a8f040;
+  box-shadow: 0 0 20px rgba(125, 200, 32, 0.4);
+  color: #fff !important;
+  transform: translateY(-1px);
 }
