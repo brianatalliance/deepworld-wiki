@@ -5,46 +5,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Deepworld underground palette — warm earthy darks */
-  --bg-page: #0d0804;          /* Near-black warm earth */
-  --bg-content: #1a1008;        /* Dark brown underground */
-  --bg-card: #221408;           /* Slightly lighter earth */
-  --bg-sidebar: #100a04;        /* Sidebar dark soil */
-  --border: #3a2210;            /* Warm brown border (like wood planks) */
-  --border-light: #4a3218;      /* Lighter border accent */
+  /* === DEEPWORLD GAME-ACCURATE PALETTE === */
+  /* Extracted from the actual game title screen UI */
   
-  /* Text — game uses white text on dark backgrounds */
-  --heading: #7DC820;           /* GAME LOGO GREEN — exact match */
-  --heading-alt: #C8A030;       /* Brass gold for secondary headings */
-  --text: #e8dcc8;              /* Warm off-white (parchment) */
-  --text-dim: #9a8868;          /* Muted warm grey */
-  --text-bright: #ffffff;       /* Pure white like in-game HUD */
+  /* Backgrounds — dark brown leather/wood panels from game UI */
+  --bg-page: #1a0e04;           /* Dark brown — matches game panel bg */
+  --bg-content: #231408;        /* Warm brown — like leather panel */
+  --bg-card: #2a1a0a;           /* Panel brown — game card bg */
+  --bg-sidebar: #1a0e04;        /* Sidebar — same as page */
+  --border: #c8952a;            /* GOLD BORDER — matches ornate game frames */
+  --border-light: #d4a830;      /* Bright gold accent border */
+  --border-dim: #6b5020;        /* Subdued gold for table lines */
   
-  /* Links & accents */
-  --link: #8ED430;              /* Logo green for links */
-  --link-hover: #a8f040;        /* Brighter green hover */
-  --accent: #7DC820;            /* Primary accent — game logo green */
-  --accent-dim: #7DC82025;      /* Green glow */
-  --accent2: #C8A030;           /* Brass gold accent */
-  --accent2-dim: #C8A03025;     /* Gold glow */
+  /* Text — from game UI */
+  --heading: #e8a020;           /* AMBER GOLD — "Learn More" / "News" headers */
+  --heading-alt: #e8a020;       /* Same warm amber for all headings */
+  --text: #ffffff;              /* Pure white — matches in-game body text */
+  --text-dim: #c8b898;          /* Warm parchment for secondary text */
+  --text-bright: #ffffff;       /* White */
+  
+  /* Links & accents — from game UI */
+  --link: #e8a020;              /* Gold links — matches game heading color */
+  --link-hover: #ffcc44;        /* Brighter gold on hover */
+  --accent: #50c8c8;            /* TEAL — matches game Play button */
+  --accent-dim: #50c8c830;      /* Teal glow */
+  --accent2: #e8a020;           /* Amber gold */
+  --accent2-dim: #e8a02030;     /* Gold glow */
+  --green-text: #60b830;        /* Green — matches "12th August 2025" date text */
   
   /* Game-specific colors */
-  --brass: #C8A030;             /* Brass metal */
-  --copper: #B87333;            /* Copper ore */
+  --brass: #c8952a;             /* Brass — ornate frame gold */
+  --copper: #b87333;            /* Copper ore */
   --earth: #6B4226;             /* Earth/dirt blocks */
-  --wood: #C8A06E;              /* Wood planks */
-  --lantern: #FFB040;           /* Warm lantern glow */
+  --wood: #a07840;              /* Wood panel mid-tone */
+  --lantern: #FFB840;           /* Warm lantern glow */
   --lava: #FF6020;              /* Lava/fire */
   --ice: #80C0D8;               /* Ice blue */
   --electric: #4060FF;          /* Electric/energy blue */
-  --sky: #8AABBD;               /* Game sky color */
+  --sky: #586898;               /* Game sky — blue-purple atmosphere */
   
   /* Rarity colors */
-  --common: #a89878;
-  --uncommon: #5A8A3C;          /* Earthy green (game vegetation) */
+  --common: #c8b898;
+  --uncommon: #60b830;
   --rare: #4488ff;
   --epic: #aa55ff;
-  --legendary: #FFB040;         /* Lantern gold */
+  --legendary: #FFB840;
   --danger: #cc3344;
   
   /* Layout */
@@ -155,7 +160,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  text-shadow: 0 0 12px rgba(125, 200, 32, 0.4);
+  text-shadow: 0 0 12px rgba(232, 160, 32, 0.5);
 }
 
 .topbar-title .logo-icon {
@@ -164,7 +169,7 @@ body {
   image-rendering: pixelated;
 }
 
-.topbar-title:hover { color: var(--link-hover); text-shadow: 0 0 16px rgba(168, 240, 64, 0.5); }
+.topbar-title:hover { color: var(--link-hover); text-shadow: 0 0 16px rgba(255, 204, 68, 0.6); }
 
 .search-box {
   position: relative;
@@ -175,7 +180,7 @@ body {
 
 .search-box input {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-dim);
   color: var(--text);
   padding: 5px 12px;
   font-size: 20px;
@@ -185,7 +190,7 @@ body {
   border-radius: 2px;
 }
 
-.search-box input:focus { border-color: var(--accent); box-shadow: 0 0 6px rgba(125, 200, 32, 0.2); }
+.search-box input:focus { border-color: var(--link-hover); box-shadow: 0 0 6px rgba(125, 200, 32, 0.2); }
 .search-box input::placeholder { color: var(--text-dim); }
 
 .search-results-dropdown {
@@ -196,7 +201,7 @@ body {
   max-height: 420px;
   overflow-y: auto;
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-dim);
   display: none;
   z-index: 1001;
   margin-top: 4px;
@@ -222,7 +227,7 @@ body {
   left: 0; bottom: 0;
   width: var(--sidebar-w);
   background: var(--bg-sidebar);
-  border-right: 1px solid var(--border);
+  border-right: 2px solid var(--border);
   overflow-y: auto;
   padding: 12px 0;
   z-index: 999;
@@ -275,16 +280,16 @@ body {
 
 .nav-link:hover {
   color: var(--link-hover);
-  background: rgba(125,200,32,0.06);
+  background: rgba(221,184,64,0.08);
   border-left-color: var(--heading);
 }
 
 .nav-link.active {
-  color: var(--accent);
-  background: linear-gradient(90deg, rgba(125,200,32,0.15), transparent);
-  border-left-color: var(--accent);
+  color: var(--link-hover);
+  background: linear-gradient(90deg, rgba(232,160,32,0.15), transparent);
+  border-left-color: var(--link-hover);
   font-weight: 600;
-  text-shadow: 0 0 6px rgba(125, 200, 32, 0.3);
+  text-shadow: 0 0 6px rgba(232, 160, 32, 0.4);
 }
 
 .sidebar-discord {
@@ -312,53 +317,53 @@ body {
   margin-top: var(--topbar-h);
   padding: 24px 32px 60px;
   max-width: 1060px;
+  background: rgba(26, 14, 4, 0.88);
+  border-left: 1px solid var(--border-dim);
+  border-right: 1px solid var(--border-dim);
   min-height: calc(100vh - var(--topbar-h));
 }
 
 /* ===== HEADINGS ===== */
-/* Headings use the game's pixel bitmap font */
+/* Headings use Telegrama — the actual Deepworld in-game font */
 h1, h2, h3, h4 {
   font-family: 'Telegrama', 'Press Start 2P', monospace;
   color: var(--heading);
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  text-shadow: 0 0 8px rgba(125, 200, 32, 0.25);
+  text-shadow: 0 0 10px rgba(232, 160, 32, 0.35), 0 0 20px rgba(232, 160, 32, 0.15);
 }
 
 h1 {
-  font-size: 26px; /* Telegrama Render 2014 the actual Deepworld font, so smaller size */
-  letter-spacing: 2px;
+  font-size: 26px;
+  letter-spacing: 3px;
   margin-bottom: 16px;
   padding-bottom: 10px;
-  border-bottom: 2px solid var(--earth);
-  border-image: linear-gradient(90deg, var(--accent), var(--brass), transparent) 1;
+  border-bottom: 2px solid var(--border);
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 22px;
   margin: 28px 0 12px;
   padding-bottom: 8px;
-  border-bottom: 1px solid var(--border);
-  color: var(--heading-alt); /* Brass gold for H2 */
-  text-shadow: 0 0 6px rgba(200, 160, 48, 0.2);
+  border-bottom: 1px solid var(--border-dim);
 }
 
-h3 { font-size: 18px; margin: 20px 0 8px; color: var(--wood); }
-h4 { font-size: 16px; margin: 14px 0 6px; color: var(--wood); }
+h3 { font-size: 18px; margin: 20px 0 8px; }
+h4 { font-size: 16px; margin: 14px 0 6px; }
 
 p { margin-bottom: 10px; }
 a { color: var(--link); text-decoration: none; transition: color 0.15s, text-shadow 0.15s; }
-a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3); }
+a:hover { color: var(--link-hover); text-shadow: 0 0 8px rgba(255, 204, 68, 0.4); }
 
 /* ===== CARDS ===== */
 .card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-dim);
   margin-bottom: 16px;
 }
 
 .card-header {
-  background: linear-gradient(135deg, rgba(125,200,32,0.15), rgba(200,160,48,0.05));
+  background: linear-gradient(135deg, rgba(232,160,32,0.2), rgba(200,148,42,0.15), rgba(107,80,32,0.1));
   border-bottom: 1px solid var(--border);
   padding: 8px 14px;
   font-family: 'Telegrama', 'Press Start 2P', monospace;
@@ -376,13 +381,13 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
 /* ===== WELCOME BANNER ===== */
 .welcome-banner {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-dim);
   padding: 0;
   margin-bottom: 24px;
 }
 
 .welcome-banner .banner-header {
-  background: linear-gradient(135deg, rgba(125,200,32,0.12), rgba(200,160,48,0.06), rgba(107,66,38,0.1));
+  background: linear-gradient(135deg, rgba(125,200,32,0.15), rgba(200,160,48,0.06), rgba(107,66,38,0.1));
   border-bottom: 2px solid var(--earth);
   padding: 14px 20px;
   display: flex;
@@ -417,7 +422,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
 
 .cat-card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-dim);
   padding: 16px 10px;
   text-align: center;
   text-decoration: none;
@@ -428,7 +433,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
 
 .cat-card:hover {
   border-color: var(--heading);
-  background: rgba(125,200,32,0.06);
+  background: rgba(221,184,64,0.08);
   color: var(--link-hover);
 }
 
@@ -462,13 +467,13 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
   text-transform: uppercase;
   padding: 8px 10px;
   text-align: left;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-dim);
   font-size: 15px;
 }
 
 .wiki-table td {
   padding: 6px 10px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-dim);
   vertical-align: middle;
 }
 
@@ -480,7 +485,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
   float: right;
   width: 260px;
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-dim);
   margin: 0 0 16px 20px;
 }
 
@@ -514,7 +519,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
   width: 90px;
   flex-shrink: 0;
   padding: 5px 8px;
-  background: rgba(125,200,32,0.06);
+  background: rgba(221,184,64,0.08);
   color: var(--text-dim);
   font-weight: 600;
   font-size: 12px;
@@ -547,7 +552,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
 
 .skill-card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-dim);
 }
 
 .skill-card .card-body { font-size: 13px; }
@@ -562,7 +567,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
 
 .acc-item {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-dim);
   padding: 10px;
   font-size: 20px;
   display: flex;
@@ -588,7 +593,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
 
 .bomb-card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-dim);
   padding: 10px;
   display: flex;
   align-items: flex-start;
@@ -616,7 +621,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
 
 .key-item {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-dim);
   padding: 12px;
   display: flex;
   align-items: flex-start;
@@ -646,7 +651,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
 /* ===== GUIDE ===== */
 .guide-step {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-dim);
   padding: 14px;
   margin-bottom: 12px;
 }
@@ -658,7 +663,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
   width: 100%;
   overflow: auto;
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-dim);
   padding: 12px;
   margin: 16px 0;
   cursor: grab;
@@ -677,7 +682,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
 
 .zoom-btn {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-dim);
   color: var(--heading);
   padding: 6px 14px;
   cursor: pointer;
@@ -688,7 +693,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
 }
 
 .zoom-btn:hover {
-  background: rgba(125,200,32,0.12);
+  background: rgba(125,200,32,0.15);
   border-color: var(--heading);
 }
 
@@ -698,7 +703,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
   bottom: 24px; right: 24px;
   width: 40px; height: 40px;
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-dim);
   color: var(--heading);
   display: none;
   align-items: center;
@@ -711,7 +716,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
 }
 
 .back-to-top.visible { display: flex; }
-.back-to-top:hover { border-color: var(--heading); background: rgba(125,200,32,0.12); }
+.back-to-top:hover { border-color: var(--heading); background: rgba(125,200,32,0.15); }
 
 /* ===== BADGES & RARITY ===== */
 .rarity-common { color: var(--text); }
@@ -773,7 +778,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
 
 .recipe .mat {
   background: rgba(200,160,48,0.08);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-dim);
   padding: 1px 5px;
   color: var(--text);
   font-size: 11px;
@@ -831,7 +836,7 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
 
 .fossil-card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-dim);
   padding: 10px;
   text-align: center;
 }
@@ -897,22 +902,22 @@ a:hover { color: var(--link-hover); text-shadow: 0 0 6px rgba(142, 212, 48, 0.3)
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
-  background: linear-gradient(135deg, #5A8A3C, #7DC820);
+  background: linear-gradient(135deg, #308888, #50c8c8);
   color: #fff !important;
   text-decoration: none;
   font-family: 'Telegrama', 'Press Start 2P', monospace;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 1px;
-  border: 2px solid #7DC820;
+  border: 2px solid #50c8c8;
   transition: all 0.2s;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-  box-shadow: 0 0 12px rgba(125, 200, 32, 0.2);
+  box-shadow: 0 0 12px rgba(80, 200, 200, 0.3);
 }
 .play-btn:hover {
-  background: linear-gradient(135deg, #7DC820, #a8f040);
-  border-color: #a8f040;
-  box-shadow: 0 0 20px rgba(125, 200, 32, 0.4);
+  background: linear-gradient(135deg, #50c8c8, #70e8e8);
+  border-color: #70e8e8;
+  box-shadow: 0 0 20px rgba(80, 200, 200, 0.4);
   color: #fff !important;
   transform: translateY(-1px);
 }
